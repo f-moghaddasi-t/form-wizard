@@ -1,0 +1,144 @@
+body{
+    direction: rtl;
+    margin: 0;
+    background: #ffe241;
+}
+.box{
+    overflow: hidden;
+    position: relative;
+    padding: 100px 30px 30px;
+    background: #fff;
+    width: 380px;
+    height: 118px;
+    border-radius: 7px;
+    box-shadow:0 0 20px 0 #f5c41f;
+    margin:140px auto 0 auto;
+}
+.box > .holder{
+    position: relative;
+    width: 300px;
+    margin: auto;
+}
+.titleHolder > .enabled{
+    margin-bottom: 0;
+}
+/* btn style */
+.sendBtn{
+    padding: 15px 22px;
+    cursor: pointer;
+    font-weight: bolder;
+    transition: .5s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #818181; 
+}
+.sendBtn:hover{
+    transition: .5s;
+    color: #424242;
+}
+.sendBtn > img{
+    width:15px ;
+    height: 15px;
+}
+
+/* End Msg */
+.finisher{
+    visibility: hidden;
+    width: 100%;
+    height:100%;
+    background: #ffffff;
+    text-align: center;
+    position: absolute;
+    transition: .5s;
+    top: 100px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    opacity: 0; 
+}
+.finisher > .finishMsg{
+    line-height: 170px;
+    font-size: 15px;
+    color: #024400;
+}
+.finisher.visible{
+    top: 0px;
+    visibility: visible;
+    opacity: 1;
+    transition: .5s;
+}
+/* input tags */
+.inputHolder {
+    height: 41px;
+    overflow: hidden;
+    border-radius: 37px;    
+    border: 2px solid #5d5d5d;
+}
+.inputHolder > input{
+    background: #fff;
+    transform: translate(230px,0px);
+    border: 0 none;
+    height: 100%;
+    width: 100%;
+    border-radius: 37px;
+    padding: 10px 15px;
+    color: #8a8a8a;
+    position: absolute;
+    transition: 0.5s;
+}
+.inputHolder > input:not(.enabled){
+    opacity: 0;
+    visibility: hidden;
+}
+.inputHolder > .enabled{
+    transform: translateX(0px);
+    opacity: 1;
+    visibility: visible;  
+}
+/* input error class */
+.inputHolder > .error{
+    background: red;
+}
+/* enabled class for titles */
+
+.titleHolder > span{
+    transform: translate(0px,0px);
+}
+.titleHolder > span.enabled{
+    transform: translate(2px,0px);
+}
+
+/* process bar  */
+.statusBar{
+    position: relative;
+    width: 72%;
+    height: 3px;
+    margin: auto;
+    margin-top: 5px;
+}
+.statusBar .process{
+    transition:.5s;
+    position: absolute;
+    width: 0px;
+    height: 100%;
+    background: #75d2a1;
+}
+/* titles */
+.titleHolder{
+    top: 19px;
+    right:23px;
+}
+.titleHolder > span{
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    color:#5d5d5d;
+    transition: .5s;
+    visibility: hidden;
+}
+.titleHolder > span.enabled{
+    bottom: 20;
+    opacity: 1;
+    visibility: visible;
+}
